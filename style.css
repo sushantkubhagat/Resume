@@ -63,7 +63,7 @@ body{
 
 section{
     width: 100vw;
-    height: 80vh;
+    height:inherit;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -303,7 +303,8 @@ section:target{
 .contact-containner{
     display: flex;
     position: relative;
-    width: 75%;
+    width: 70%;
+    height: inherit;
     margin: 20px;
     border:0.5px;
     overflow-wrap: wrap;
@@ -318,6 +319,7 @@ section:target{
     margin: 15;
     margin-left: 15px;
 
+
 }
 #contact-form{
     
@@ -329,3 +331,59 @@ section:target{
 .social_handle{
     color: black;
 }
+
+/*media tag*/
+@media screen and (max-width: 600px) {
+    .horizontal_list li{
+        font-size: 1rem;
+    }
+    #my_name{
+        font-size: 2rem;
+    }
+    .social_icon li a i{
+        font-size: 1rem;
+    }
+    .textline-divider{
+        left: 5%;
+    }
+    .textline-traveller{
+        top: inherit;
+    }
+    .textline-box{
+        left: 12%;
+        width: 80%;
+    }
+    .textline-box:nth-child(2n){
+        left: 12%;
+    }
+    .textline-box:nth-child(2n+1)::after{
+        left: -15%;
+    }
+    .textline-box:nth-child(2n)::after{
+        left: -15%;
+    }
+    .contact-containner{
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: nowrap;
+        justify-content: space-evenly;
+        margin-left: 30px;
+        
+    }
+    .contact-form-containner{
+        margin-left: 0px;
+        margin-bottom: 60px;
+        
+    }
+    #contact-form{
+        margin: 0px;
+        margin-bottom: 30px;
+        justify-content: flex-start;
+    }
+    html{
+        font-size: 15px;
+    }
+    .section_heading span{
+        font-size: 30px;
+    }
+} 
